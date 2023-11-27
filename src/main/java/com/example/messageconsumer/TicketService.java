@@ -39,4 +39,11 @@ public class TicketService {
     public List<Ticket> getAllTickets() {
         return ticketRepository.findAll();
     }
+
+    public void saveTicket(String name) {
+        Ticket ticket = new Ticket();
+        ticket.setName(name);
+        ticketRepository.save(ticket);
+    }
+
 }
